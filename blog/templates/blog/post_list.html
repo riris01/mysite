@@ -7,16 +7,13 @@
             <h1><a href="">Mory's Blog</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-            <p>published: 30.08.2022, 21:52</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Love the life that you own and given from your parents. No need to fear as long as you can stand yourself on this ground</p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 30.08.2022, 21:52</p>
-            <h2><a href="">My second post</a></h2>
-            <p>What is your biggest concern? My biggest concern is that I am going to stop learning someday.</p>
-        </div>
     </body>
 </html>
